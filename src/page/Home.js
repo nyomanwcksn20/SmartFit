@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import { FlatList,Image,StyleSheet,ScrollView,Text, View, TouchableOpacity } from 'react-native'
 import avatar from "../asset/avatar.jpg";
-import barbel from "../asset/barbel.png";
-import yoga from "../asset/yoga.png";
+
 import fitnesstest from "../asset/fitnesstest.jpg";
 export class Home extends Component {
 
   render() {
     return (
       
-      <View style={{ flex: 1, }}>
+      <View style={{ flex: 1,paddingTop:30 }}>
 
         <View style={{ margin: 10,}}>
             <View style={{flexDirection:"row"}}>
@@ -20,31 +19,13 @@ export class Home extends Component {
             </View>
         </View>
 
-          <TouchableOpacity  onPress={()=>{this.props.navigation.navigate('Fitness')}}> 
+          
            <View style={{alignItems:'center',justifyContent:'center'}}>
               <Image source={fitnesstest} style={styles.img} />
             </View>
-          </TouchableOpacity>
+         
 
-          <ScrollView>
-            <View style={styles.container}>
-
-              <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
-                <View style={styles.inner}>
-                <Image source={yoga} style={styles.imgbtn}/>
-                  <Text style={{color:"white",margin:10}}>Senam Lantai</Text>
-                </View>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
-                <View style={styles.inner}>
-                  <Image source={barbel} style={styles.imgbtn}/>
-                  <Text style={{color:"white",margin:10}}>Angkat Barbel</Text>
-                </View>
-              </TouchableOpacity>
-
-            </View>
-          </ScrollView>
+         
     </View>
     )
   }

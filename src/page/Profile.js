@@ -12,7 +12,7 @@ export class Profile extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, }}>
+            <View style={{ flex: 1,paddingTop:30 }}>
 
             <View style={{ margin: 10,}}>
                 <View style={{flexDirection:"row"}}>

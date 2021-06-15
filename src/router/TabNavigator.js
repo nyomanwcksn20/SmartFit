@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FitnessStackNavigator, MainStackNavigator, ProfileStackNavigator } from "./Router";
+import { FitnessStackNavigator, MainStackNavigator, ProfileStackNavigator,LoginStackNavigator } from "./Router";
 import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -31,9 +31,11 @@ const BottomTabNavigator = () => {
       inactiveTintColor: 'gray',
     }}
   >
+
+      <Tab.Screen name="Login" component={LoginStackNavigator} options={{tabBarVisible: false,}}/>
       <Tab.Screen name="Home" component={MainStackNavigator} />
       <Tab.Screen name="Fitness" component={FitnessStackNavigator} />
-      <Tab.Screen  name="Profile" component={ProfileStackNavigator} />
+      <Tab.Screen  name="Profile" component={ProfileStackNavigator}/>
     </Tab.Navigator>
   );
 };

@@ -43,7 +43,7 @@ LoginAction
     render() {
         return (
             <View style={{paddingTop:30 }}>
-                <Text> USername </Text>
+                <Text> Username </Text>
                 <TextInput 
                 style={styles.input}
                 onChangeText={(data)=>{this.setState({username:data})}}

@@ -29,7 +29,7 @@ const LoginStackNavigator = () => {
 const MainStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Home" component={Home} options={{headerShown:false}} />
+      <Stack.Screen name="Home" component={Home} options={{tabBarVisible: false,headerShown:false}} />
     </Stack.Navigator>
   );
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { StatusBar } from 'expo-status-bar';
 import { FlatList,Image,StyleSheet,Text, View, TouchableOpacity } from 'react-native'
 import avatar from "../asset/avatar.jpg";
 
@@ -13,7 +14,8 @@ export class Profile extends Component {
     render() {
         return (
             <View style={{ flex: 1,paddingTop:30 }}>
-
+            <StatusBar style="auto" />
+            
             <View style={{ margin: 10,}}>
                 <View style={{flexDirection:"row"}}>
                     <Image source={avatar} style={styles.imgprofile} />

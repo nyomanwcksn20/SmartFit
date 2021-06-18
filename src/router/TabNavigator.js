@@ -8,6 +8,7 @@ const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
+    
     screenOptions={({ route }) => ({
       tabBarIcon: ({ focused, color, size }) => {
         let iconName;
@@ -16,10 +17,12 @@ const BottomTabNavigator = () => {
           iconName = focused
             ? 'home'
             : 'home';
-        } else if (route.name === 'Fitness') {
+        } else if (route.name === 'Exercise') {
           iconName = focused ? 'fitness' : 'fitness';
         } else if (route.name === 'Profile') {
           iconName = focused ? 'list' : 'list';
+        }else if (route.name === 'Log Out') {
+          iconName = focused ? 'arrow-back-outline' : 'arrow-back-outline';
         }
 
         // You can return any component that you like here!
@@ -31,10 +34,10 @@ const BottomTabNavigator = () => {
       inactiveTintColor: 'gray',
     }}
   >
-
-      <Tab.Screen name="Login" component={LoginStackNavigator} options={{tabBarVisible: false,}}/>
+      
+      <Tab.Screen name="Log Out" component={LoginStackNavigator} options={{tabBarVisible: false,}}/>
       <Tab.Screen name="Home" component={MainStackNavigator} />
-      <Tab.Screen name="Fitness" component={FitnessStackNavigator} />
+      <Tab.Screen name="Exercise" component={FitnessStackNavigator}/>
       <Tab.Screen  name="Profile" component={ProfileStackNavigator}/>
     </Tab.Navigator>
   );

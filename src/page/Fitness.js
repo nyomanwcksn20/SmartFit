@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import { FlatList,Image,StyleSheet,ScrollView,Text, View, TouchableOpacity } from 'react-native'
 import barbel from "../asset/barbel.png";
 import yoga from "../asset/yoga.png";
+import { StatusBar } from 'expo-status-bar';
 export class Fitness extends Component {
     render() {
         return (
             <View style={{ flex: 1,paddingTop:30 }}>
-                 <ScrollView>
+            <StatusBar style="auto" />
+            
+            <ScrollView>
             <View style={styles.container}>
 
               <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('Profile')}}>

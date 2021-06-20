@@ -12,17 +12,17 @@ export class Fitness extends Component {
             <ScrollView>
             <View style={styles.container}>
 
-              <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
-                <View style={styles.inner}>
+              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Profile')}}>
+                <View style={styles.box}>
                 <Image source={yoga} style={styles.imgbtn}/>
-                  <Text style={{color:"white",margin:10}}>Senam Lantai</Text>
+                  <Text style={styles.txt}>Senam Lantai</Text>
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
-                <View style={styles.inner}>
+              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Profile')}}>
+                <View style={styles.box1}>
                   <Image source={barbel} style={styles.imgbtn}/>
-                  <Text style={{color:"white",margin:10}}>Angkat Barbel</Text>
+                  <Text style={styles.txt}>Angkat Barbel</Text>
                 </View>
               </TouchableOpacity>
 
@@ -40,48 +40,36 @@ const styles = StyleSheet.create({
       width:'100%',
       height:'85%',
       padding:5,
-      flexDirection:'row',
-      flexWrap:'wrap',
+     
     },
   
     box: {
-      width:'50%',
-      height:'50%',
-      padding:5,
-    },
-  
-    inner: {
       flex:1,
-      backgroundColor:'dimgray',
+      margin:5,
+      borderRadius:10,
+      backgroundColor:'tomato',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+
+    box1: {
+      flex:1,
+      margin:5,
+      borderRadius:10,
+      backgroundColor:'steelblue',
       alignItems: 'center',
       justifyContent: 'center'
     },
   
-    img: {
-      borderRadius: 10,
-  
-        marginTop: 5,
-        width:"95%",
-        height:150, 
-    },
-  
-    imgprofile: {
-      borderRadius: 50,
-        marginTop: 5,
-        width:75,
-        height:75, 
-    },
-  
-    txtprofile: {
-        marginTop: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingLeft:10, 
-    },
-  
     imgbtn: {
       margin: 10,
-      width:100,
-        height:100,
-    }
+      width:75,
+      height:75,
+    },
+
+    txt:{
+      color:"white",
+      margin:10,
+      fontSize:18
+  }
   })

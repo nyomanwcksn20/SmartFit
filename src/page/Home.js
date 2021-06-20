@@ -3,7 +3,7 @@ import { FlatList,Image,StyleSheet,ScrollView,Text, View, TouchableOpacity } fro
 import avatar from "../asset/avatar.jpg";
 import food1 from "../asset/food1.jpg";
 import fitnesstest from "../asset/fitnesstest.jpg";
-import jogging from "../asset/jogging.jpg";
+import health from "../asset/health.jpg";
 import suplemen from "../asset/suplemen.jpg";
 import { StatusBar } from 'expo-status-bar';
 
@@ -34,7 +34,7 @@ export class Home extends Component {
 
             <ScrollView >
 
-              <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
+              <TouchableOpacity style={styles.box}  onPress={()=>{this.props.navigation.navigate('MakananSehat')}}>
                 <View style={{ margin: 10,}}>
                   <View style={{flexDirection:"row"}}>
                     <Image source={food1} style={styles.imgbtn} />
@@ -45,10 +45,10 @@ export class Home extends Component {
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.box1}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
+              <TouchableOpacity style={styles.box1}  onPress={()=>{this.props.navigation.navigate('HidupSehat')}}>
                 <View style={{ margin: 10,}}>
                   <View style={{flexDirection:"row"}}>
-                    <Image source={jogging} style={styles.imgbtn} />
+                    <Image source={health} style={styles.imgbtn} />
                     <View style={styles.txtbtn}>
                       <Text style={{ fontSize: 20}}>Hidup Sehat</Text>
                     </View>
@@ -56,7 +56,7 @@ export class Home extends Component {
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.box2}  onPress={()=>{this.props.navigation.navigate('Profile')}}>
+              <TouchableOpacity style={styles.box2}  onPress={()=>{this.props.navigation.navigate('Suplemen')}}>
                 <View style={{ margin: 10,}}>
                   <View style={{flexDirection:"row"}}>
                     <Image source={suplemen} style={styles.imgbtn} />

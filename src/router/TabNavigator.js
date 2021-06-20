@@ -35,7 +35,7 @@ const BottomTabNavigator = () => {
     }}
   >
       
-      <Tab.Screen name="Log Out" component={LoginStackNavigator} options={{tabBarVisible: false,}}/>
+      {/* <Tab.Screen name="Log Out" component={LoginStackNavigator} options={{tabBarVisible: false,}}/> */}
       <Tab.Screen name="Home" component={MainStackNavigator} />
       <Tab.Screen name="Exercise" component={FitnessStackNavigator}/>
       <Tab.Screen  name="Profile" component={ProfileStackNavigator}/>

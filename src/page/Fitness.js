@@ -19,7 +19,7 @@ export class Fitness extends Component {
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Profile')}}>
+              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('AngkatBeban')}}>
                 <View style={styles.box1}>
                   <Image source={barbel} style={styles.imgbtn}/>
                   <Text style={styles.txt}>Angkat Barbel</Text>

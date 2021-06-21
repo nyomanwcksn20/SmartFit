@@ -10,6 +10,7 @@ import Registrasi from "../page/Registrasi";
 import Suplemen from "../page/Suplemen";
 import HidupSehat from "../page/HidupSehat";
 import MakananSehat from "../page/MakananSehat";
+import AngkatBeban from "../page/AngkatBeban";
 
 const Stack = createStackNavigator();
 
@@ -55,6 +56,7 @@ const FitnessStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Fitness" component={Fitness} options={{headerShown:false}}/>
+      <Stack.Screen name="AngkatBeban" component={AngkatBeban} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }

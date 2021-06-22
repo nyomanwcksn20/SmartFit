@@ -13,14 +13,14 @@ export class Profile extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1,paddingTop:30 }}>
+            <View style={{ flex: 1,paddingTop:30,backgroundColor:"#242320" }}>
             <StatusBar style="auto" />
             
             <View style={{ margin: 10,}}>
                 <View style={{flexDirection:"row"}}>
                     <Image source={avatar} style={styles.imgprofile} />
                     <View style={styles.txtprofile}>
-                        <Text style={{ fontSize: 20}}>NamaUser</Text>
+                        <Text style={{ fontSize: 20,color:'white'}}>NamaUser</Text>
                     </View>
                 </View>
             </View>

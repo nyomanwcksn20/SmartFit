@@ -30,6 +30,9 @@ const BottomTabNavigator = () => {
       },
     })}
     tabBarOptions={{
+      style:{
+        backgroundColor: '#2b2a26'
+      },
       activeTintColor: 'tomato',
       inactiveTintColor: 'gray',
     }}

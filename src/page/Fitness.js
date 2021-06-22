@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 export class Fitness extends Component {
     render() {
         return (
-            <View style={{ flex: 1,paddingTop:30 }}>
+            <View style={{ flex: 1,paddingTop:30,backgroundColor:"#242320" }}>
             <StatusBar style="auto" />
             
             <ScrollView>

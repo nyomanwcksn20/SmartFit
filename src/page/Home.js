@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { FlatList,Image,StyleSheet,ScrollView,Text, View, TouchableOpacity } from 'react-native'
 import avatar from "../asset/avatar.jpg";
 import food1 from "../asset/food1.jpg";
-import fitnesstest from "../asset/fitnesstest.jpg";
+import banner from "../asset/banner.jpeg";
 import health from "../asset/health.jpg";
 import suplemen from "../asset/suplemen.jpg";
 import { StatusBar } from 'expo-status-bar';
@@ -12,24 +12,24 @@ export class Home extends Component {
   render() {
     return (
       
-      <View style={{ flex: 1,paddingTop:30 }}>
+      <View style={{ flex: 1,paddingTop:30, backgroundColor:"#242320"}}>
       <StatusBar style="auto" />
         <View style={{ margin: 10,}}>
             <View style={{flexDirection:"row"}}>
                 <Image source={avatar} style={styles.imgprofile} />
                 <View style={styles.txtprofile}>
-                    <Text style={{ fontSize: 20}}>Hallo, NamaUser</Text>
+                    <Text style={{ fontSize: 20,color:'white'}}>Hallo, NamaUser</Text>
                 </View>
             </View>
         </View>
 
           
         <View style={{alignItems:'center',justifyContent:'center'}}>
-          <Image source={fitnesstest} style={styles.img} />
+          <Image source={banner} style={styles.img} />
         </View>
 
         <View style={{ marginTop: 10,marginRight: 10,marginLeft: 10 }}>
-          <Text style={{ fontSize: 20}}>Tips</Text>
+          <Text style={{ fontSize: 20,color:'white'}}>Tips</Text>
         </View>
 
             <ScrollView >
@@ -39,7 +39,7 @@ export class Home extends Component {
                   <View style={{flexDirection:"row"}}>
                     <Image source={food1} style={styles.imgbtn} />
                     <View style={styles.txtbtn}>
-                      <Text style={{ fontSize: 20}}>Makanan Sehat</Text>
+                      <Text style={{ fontSize: 20,color:'white'}}>Makanan Sehat</Text>
                     </View>
                   </View>
                 </View>
@@ -50,7 +50,7 @@ export class Home extends Component {
                   <View style={{flexDirection:"row"}}>
                     <Image source={health} style={styles.imgbtn} />
                     <View style={styles.txtbtn}>
-                      <Text style={{ fontSize: 20}}>Hidup Sehat</Text>
+                      <Text style={{ fontSize: 20,color:'white'}}>Hidup Sehat</Text>
                     </View>
                   </View>
                 </View>
@@ -61,7 +61,7 @@ export class Home extends Component {
                   <View style={{flexDirection:"row"}}>
                     <Image source={suplemen} style={styles.imgbtn} />
                     <View style={styles.txtbtn}>
-                      <Text style={{ fontSize: 20}}>Suplemen</Text>
+                      <Text style={{ fontSize: 20,color:'white'}}>Suplemen</Text>
                     </View>
                   </View>
                 </View>
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       marginTop: 5,
       width:"95%",
-      height:150, 
+      height:180, 
   },
 
   imgprofile: {
@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
 
 
   txtprofile: {
+      
       marginTop: 5,
       alignItems: 'center',
       justifyContent: 'center',

@@ -25,8 +25,8 @@ export default class AddProfile extends React.Component {
     this.state = {
       nama: '',
       image: null,
-      bb: '',
       tb: '',
+      bb: '',
       filePath: {}, //folder image
       upload: false, //pengecekan upload file
     };
@@ -161,7 +161,7 @@ export default class AddProfile extends React.Component {
     try {
       this.setState({ uploading: true });
       if (!pickerResult.cancelled) {
-        uploadUrl = await uploadImageAsync(pickerResult.uri, this.state.title);
+        uploadUrl = await uploadImageAsync(pickerResult.uri, this.state.nama);
         this.setState({ image: uploadUrl });
       }
     } catch (e) {
@@ -172,7 +172,7 @@ export default class AddProfile extends React.Component {
   };
 }
 
-async function uploadImageAsync(uri, title) {
+async function uploadImageAsync(uri, nama) {
   const blob = await new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     xhr.onload = function () {
@@ -187,7 +187,7 @@ async function uploadImageAsync(uri, title) {
   });
 
 //folder lokasi gambar firebase
-  const ref = app.storage().ref('/users_image').child(title);
+  const ref = app.storage().ref('/users_image').child(nama);
   // const ref = app.storage().ref('/news_image').child('image' + title);
   const snapshot = await ref.put(blob);
   // blob.close();

@@ -3,7 +3,6 @@ import { Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 
 import { app } from '../config/db';
-
 //style
 import styles from '../styles/style';
 
@@ -31,7 +30,7 @@ export default class Register extends React.Component {
         .then(() => {
           this.setState({ error: '' });
           alert('Register Berhasil, Silahkan Login');
-          this.props.navigation.navigate('addProfile');
+          this.props.navigation.navigate('AddProfile');
         })
         .catch((e) => {
           alert(e);

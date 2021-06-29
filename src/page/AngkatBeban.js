@@ -5,31 +5,23 @@ import * as Permissions from 'expo-permissions';
 import Constants from 'expo-constants';
 
 export function AngkatBeban() {
-    const [showWebView, setShowWebView] = React.useState(false);
-    React.useEffect(() => {
-      const fn = async () => {
-        const { status } = await Permissions.askAsync(Permissions.CAMERA);
-        console.log(status);
-        if (status === 'granted') {
-          setShowWebView(true);
-        }
-      };
-  
-      fn();
-    }, []);
-    if (!showWebView) {
-      return (
-        <View>
-          <Text>Grant Permission first</Text>
-        </View>
-      );
-    }
-    
     
         return (
           
-                 <WebView source={{ uri: 'https://tensorflowuhuy123.herokuapp.com/'}} style={{ marginTop: 100 }}/>
+          <WebView style={styles.container}
     
+          userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+          originWhitelist={['*']}
+          allowsInlineMediaPlayback
+          bounces={true}
+          source={{
+            uri: "https://tensorflowuhuy123.herokuapp.com/", //URL of your redirect site
+          }}
+          startInLoadingState
+          scalesPageToFit
+          javaScriptEnabled={true}
+          mediaPlaybackRequiresUserAction={false}
+          />
         )
     
 }

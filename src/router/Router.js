@@ -5,7 +5,7 @@ import History from "../page/History";
 import Profile from "../page/Profile";
 import Fitness from "../page/Fitness";
 import Login from "../page/Login";
-import Registrasi from "../page/Registrasi";
+import Register from "../page/Register";
 
 import Suplemen from "../page/Suplemen";
 import HidupSehat from "../page/HidupSehat";
@@ -16,9 +16,9 @@ const Stack = createStackNavigator();
 
 const screenOptionStyle = {
   headerStyle: {
-    backgroundColor: "white",
+    backgroundColor: "#2b2a26",
   },
-  headerTintColor: "black",
+  headerTintColor: "white",
   headerBackTitle: "Back",
 };
 
@@ -26,7 +26,7 @@ const LoginStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
-      <Stack.Screen name="Registrasi" component={Registrasi} options={{headerShown:false}}/>
+      <Stack.Screen name="Register" component={Register} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }

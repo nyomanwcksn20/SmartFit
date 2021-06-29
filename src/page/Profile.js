@@ -15,33 +15,50 @@ export class Profile extends Component {
         return (
             <View style={{ flex: 1,paddingTop:30,backgroundColor:"#242320" }}>
             <StatusBar style="auto" />
-            
-            <View style={{ margin: 10,}}>
-                <View style={{flexDirection:"row"}}>
+
+                <View style={styles.container}>
                     <Image source={avatar} style={styles.imgprofile} />
-                    <View style={styles.txtprofile}>
-                        <Text style={{ fontSize: 20,color:'white'}}>NamaUser</Text>
+                    <View>
+                        <Text style={styles.txtprofile}>NamaUser</Text>
                     </View>
                 </View>
-            </View>
 
-            {/* <View>
-                <FlatList
-                    data={this.state.dataFlatList}
-                    keyExtractor={item=>parseInt(item.id)}
-                    renderItem={({item})=>(
-                        <View style={{borderWidth:5,borderColor:"red",flexDirection:"row",margin:5}}>
-                            <Image style={{width:100,height:100}}
-                                source={{uri:`http://192.168.100.88:8080/laporan/image/${item.image}`}}
-                            />
-                            <View style={{flexDirection:"column",alignSelf:"center"}}>
-                                <Text>Angkat Barbel : {item.status}</Text>
-                                <Text>Senam Lantai : {item.jam}</Text>
-                            </View>
-                        </View>
-                    )}
-                />
-            </View> */}
+                <View>
+                    <Text style={styles.txttitle}>Basic Profile</Text>
+                    <Text style={styles.txt}>Name</Text>
+                    <Text style={styles.txt}>Birth Date</Text>
+                    <Text style={styles.txt}>Height</Text>
+                    <Text style={styles.txt}>Weight</Text>
+                </View>
+
+                <View style={{marginTop:20}}>
+                    <Text style={styles.txttitle}>Private Information</Text>
+                    <Text style={styles.txt}>Email</Text>
+                    <Text style={styles.txt}>Phone Number</Text>
+                    <Text style={styles.txt}>Gender</Text>
+                </View>
+
+                <View style={{marginTop:20}}>
+                    <TouchableOpacity>
+                        <Text style={styles.txtlink}>Edit Profile</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={styles.txtlink}>Change Password</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{marginTop:20}}>
+                    <Text style={styles.txttitle}>About</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.txt}>Help</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={styles.txt}>Privacy</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={styles.txt}>Terms of Service</Text>
+                    </TouchableOpacity>
+                </View>
         </View>
         )
     }
@@ -52,36 +69,13 @@ export default Profile
 
 const styles = StyleSheet.create({
     container: {
-      width:'100%',
-      height:'85%',
-      padding:5,
-      flexDirection:'row',
-      flexWrap:'wrap',
-    },
-  
-    box: {
-      width:'50%',
-      height:'50%',
-      padding:5,
-    },
-  
-    inner: {
-      flex:1,
-      backgroundColor:'dimgray',
+      margin:10,
       alignItems: 'center',
-      justifyContent: 'center'
-    },
-  
-    img: {
-      borderRadius: 10,
-  
-        marginTop: 5,
-        width:"95%",
-        height:150, 
+      justifyContent: 'center',
     },
   
     imgprofile: {
-      borderRadius: 50,
+        borderRadius: 50,
         marginTop: 5,
         width:75,
         height:75, 
@@ -89,14 +83,36 @@ const styles = StyleSheet.create({
   
     txtprofile: {
         marginTop: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingLeft:10, 
+        fontSize: 20,
+        color:'white'
     },
-  
-    imgbtn: {
-      margin: 10,
-      width:100,
-        height:100,
+
+    txttitle:{ 
+        backgroundColor: '#42403b',
+        paddingTop:2,
+        paddingBottom:2,
+        paddingLeft:5,
+        marginTop: 5,
+        fontSize: 18,
+        color:'white'
+    },
+
+    txt:{ 
+        backgroundColor: '#5e5d5c',
+        paddingTop:2,
+        paddingBottom:2,
+        paddingLeft:5,
+        marginBottom: 1,
+        fontSize: 18,
+        color:'white'
+    },
+
+    txtlink:{ 
+        color:'#0e75a1',
+        paddingTop:2,
+        paddingBottom:2,
+        paddingLeft:5,
+        marginTop: 5,
+        fontSize: 18,
     }
   })

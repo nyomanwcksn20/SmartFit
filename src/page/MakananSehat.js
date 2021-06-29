@@ -5,7 +5,7 @@ import food1 from "../asset/food1.jpg";
 export class MakananSehat extends Component {
     render() {
         return (
-            <ScrollView>
+            <ScrollView style={{backgroundColor:"#242320"}}>
               <View style={styles.container}>
                 <Image source={food1} style={styles.img} />
 
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     container: {
       flex:1,
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      backgroundColor:"#242320"
     },
   
     img: {
@@ -53,6 +54,8 @@ const styles = StyleSheet.create({
         fontSize:18,
         borderWidth:1,
         borderRadius: 10,
+        borderColor:'white',
+        color: 'white'
     },
 
     tittle: {
@@ -61,6 +64,7 @@ const styles = StyleSheet.create({
         padding: 5,
         fontWeight:'bold',
         fontSize:20,
+        color: 'white'
     },
 
   })

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
-import * as Permissions from 'expo-permissions';
 import Constants from 'expo-constants';
 
-export function AngkatBeban() {
+export function Pemanasan() {
     
         return (
           
@@ -15,7 +14,7 @@ export function AngkatBeban() {
           allowsInlineMediaPlayback
           bounces={true}
           source={{
-            uri: "https://tensorflowuhuy123.herokuapp.com/", //URL of your redirect site
+            uri: "https://pemanasanuhuy.herokuapp.com/", //URL of your redirect site
           }}
           startInLoadingState
           scalesPageToFit
@@ -26,15 +25,15 @@ export function AngkatBeban() {
     
 }
 
-export default AngkatBeban
+export default Pemanasan
 
 const styles = StyleSheet.create({
     container: {
+      marginTop: 20,
       flex: 1,
       justifyContent: 'center',
       paddingTop: Constants.statusBarHeight,
       backgroundColor: '#ecf0f1',
       padding: 8,
-      marginTop:20,
     },
   });

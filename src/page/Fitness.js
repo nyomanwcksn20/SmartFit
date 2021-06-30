@@ -12,10 +12,10 @@ export class Fitness extends Component {
             <ScrollView>
             <View style={styles.container}>
 
-              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Profile')}}>
+              <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Pemanasan')}}>
                 <View style={styles.box}>
                 <Image source={yoga} style={styles.imgbtn}/>
-                  <Text style={styles.txt}>Senam Lantai</Text>
+                  <Text style={styles.txt}>Pemanasan</Text>
                 </View>
               </TouchableOpacity>
 

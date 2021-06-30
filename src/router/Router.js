@@ -12,6 +12,7 @@ import Suplemen from '../page/Suplemen';
 import HidupSehat from '../page/HidupSehat';
 import MakananSehat from '../page/MakananSehat';
 import AngkatBeban from '../page/AngkatBeban';
+import Pemanasan from '../page/Pemanasan';
 
 const Stack = createStackNavigator();
 
@@ -96,6 +97,11 @@ const FitnessStackNavigator = () => {
       <Stack.Screen
         name="AngkatBeban"
         component={AngkatBeban}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Pemanasan"
+        component={Pemanasan}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

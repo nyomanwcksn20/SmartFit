@@ -16,8 +16,7 @@ import * as Permissions from 'expo-permissions';
 
 import { app } from '../config/db';
 import { addItem } from '../services/AddServices';
-
-import styles from '../styles/style';
+import logo from '../asset/icon.png';
 
 export default class AddProfile extends React.Component {
   constructor(props) {
@@ -57,7 +56,12 @@ export default class AddProfile extends React.Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding">
-        <ScrollView>
+        <View style={styles.container} >
+
+        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+          <Image source={logo} style={styles.img} />
+        </View>
+
           <Text style={styles.titlePage}>Isi Profile</Text>
           <View style={styles.containerInput}>
             <TextInput
@@ -86,17 +90,17 @@ export default class AddProfile extends React.Component {
             />
           </View>
 
-          <View style={styles.buttonPickImage}>
-            <Button title="Choose File" onPress={this._pickImage} />
-          </View>
+          <TouchableOpacity style={styles.buttonPickImage} onPress={this._pickImage} >
+            <Text style={styles.text}>Ambil Foto</Text>
+          </TouchableOpacity>
 
           {this._maybeRenderImage()}
           {this._maybeRenderUploadingOverlay()}
 
-          <View style={styles.buttonAddNews}>
-            <Button title="Simpan Profile" onPress={this.handleSubmit} />
-          </View>
-        </ScrollView>
+          <TouchableOpacity style={styles.buttonAddNews} onPress={this.handleSubmit}>
+            <Text style={styles.text}>Simpan Profile</Text>
+          </TouchableOpacity>
+        </View>
       </KeyboardAvoidingView>
     );
   }
@@ -194,3 +198,112 @@ async function uploadImageAsync(uri, nama) {
 
   return await snapshot.ref.getDownloadURL();
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#B0E0E6',
+  },
+
+  containerButton: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+    width: '100%',
+  },
+
+  containerInput: {
+    borderBottomColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 30,
+    borderBottomWidth: 1,
+    width: 250,
+    height: 45,
+    marginBottom: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  input: {
+    height: 45,
+    marginLeft: 16,
+    borderBottomColor: '#FFFFFF',
+    flex: 1,
+  },
+  text: {
+    fontSize: 15,
+    color: '#fff',
+    paddingTop:8,
+    textAlign: 'center',
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  appButton: {
+    elevation: 8,
+    backgroundColor: "black",
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    margin: 5,
+  },
+  appButtonText: {
+    fontSize: 18,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
+  },
+// Start add news
+
+buttonPickImage : {
+    height: 35,
+    marginBottom: 20,
+    width: 150,
+    borderRadius: 30,
+    backgroundColor: '#3498db',
+    color: 'white'
+},
+
+buttonAddNews: {
+  height: 35,
+  marginBottom: 20,
+  width: 150,
+  borderRadius: 30,
+  backgroundColor: '#3498db',
+  color: 'black'
+},
+
+imageAddProfile : {
+  width:250,
+  height:250
+},
+
+buttonAddProfile : {
+  width:150,
+  margin:10
+},
+
+inputAddProfile : {
+  width:250
+},
+//end
+titlePage :{
+  color: 'black',
+  padding: 10,
+  marginBottom: 5,
+  fontSize: 20,
+  fontWeight: 'bold',
+},
+img: {
+    borderRadius: 10,
+    marginTop: 5,
+    width: 100,
+    height: 100,
+}
+});
